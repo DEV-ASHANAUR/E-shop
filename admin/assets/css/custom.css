@@ -1,0 +1,28 @@
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLmNzcyIsInNvdXJjZXMiOlsiY3VzdG9tLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9 */
+
+/*# sourceMappingURL=custom.css.map */
+td.view i {
+    color: #fff;
+    font-size: 20px;
+    background: #4caf50;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px #777272;
+} 
+th.cus_delete i {
+    color: #fff;
+    font-size: 20px;
+    background: red;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px #777272;
+} 
+a.trash i {
+    color: #fff;
+    font-size: 20px;
+    background: red;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px #777272;
+}

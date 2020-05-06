@@ -1,0 +1,103 @@
+/* laptop :1200px. */
+/* @media (min-width: 1200px) and (max-width: 1500px) {
+    .owl-carousel .owl-nav div.owl-prev {
+        background: red;
+    }
+
+    .owl-carousel .owl-nav div.owl-next {
+        background: red;
+    }
+} */
+
+
+/* Normal desktop/ lg device :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .top-right-header {
+        text-align: right;
+        float: none;
+    }
+
+    .slider-text h2 {
+        font-size: 41px;
+    }
+
+    .slider-img img {
+        padding-left: 68px;
+    }
+}
+
+
+/* Tablet desktop :768px./ md device */
+@media (min-width: 768px) and (max-width: 991px) {
+    .top-right-header ul li {
+        padding-right: 14px;
+    }
+
+    .slider-text h2 {
+        font-size: 37px;
+    }
+
+    .slider-img img {
+        padding-left: 29px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .container-fluid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .top-right-header {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    .top-left-header {
+        display: none;
+    }
+
+    .top-right-header ul li {
+        padding-right: 2px;
+    }
+
+    .top-right-header ul li a {
+        font-size: 13px;
+    }
+
+    .slider-text h2 {
+        font-size: 20px;
+    }
+
+    .slider-img img {
+        padding-top: 164px;
+        padding-left: 0px;
+    }
+
+    .slider-box {
+
+        height: 70vh;
+    }
+
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 450px
+    }
+
+    .top-right-header ul li {
+        padding-right: 3px;
+    }
+
+    .slider-text h2 {
+        font-size: 16px;
+    }
+
+}
