@@ -64,7 +64,7 @@
                             <td><?php echo $row->name;?></td>
                             <td><?php echo number_format($row->total);?><span class="pl-1">৳</span></td>
                             <td><?php echo $row->mobile;?></td>
-                            <td><?php echo date('j-m-Y, g:i a',strtotime($row->created))?></td>
+                            <td><?php echo date('j-m-Y',strtotime($row->created))?></td>
                             <td class="view text-center"><a data-toggle="tooltip" data-placement="top" title="View Invoice" href="con_invoice.php?or_id=<?php echo $row->order_id;?>&uid=<?php echo $row->user_id;?>"><i class="fas fa-eye"></i></a>
 
                             <a onclick="javascript:return confirm('Are You Sure.?');" data-toggle="tooltip" data-placement="top" class="trash" title="Unshift" href="unshift.php?id=<?php echo $row->order_id;?>"><i class="fas fa-redo"></i></a>

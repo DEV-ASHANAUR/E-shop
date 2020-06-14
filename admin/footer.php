@@ -9,6 +9,7 @@
   </div>
   <!-- General JS Scripts -->
   <script src="assets/js/app.min.js"></script>
+  
   <!-- JS Libraies -->
   <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
   <!-- Page Specific JS File -->
@@ -26,8 +27,16 @@
   <!-- Page Specific JS File -->
   <script src="assets/js/preview.js"></script>
   <script src="assets/js/page/datatables.js"></script>
+  
   <!-- Custom JS File -->
+  <script src="assets/js/chart.min.js"></script>
+  <script src="assets/js/chart-bar-demo.js"></script>
+
   <script src="assets/js/custom.js"></script>
+  <!-- new map -->
+  <!-- <script src="assets/map/vendor.bundle.base.js"></script>
+  <script src="assets/map/vendor.bundle.addons.js"></script> -->
+  <!-- new map end-->
   <script type="text/javascript">
         function myfun(paravalue){
             var backup = document.body.innerHTML;

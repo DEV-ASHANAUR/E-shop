@@ -441,7 +441,7 @@
             $ship = $ship;
             $total = $total;
 
-            $this->sql ="INSERT INTO `cus_order`(`order_id`, `user_id`, `product_id`, `product_price`, `product_quantity`, `shipping`, `total`) VALUES ('$or_id','$user_id','$pro_id','$pro_price','$pro_quan','$ship','$total')";
+            $this->sql ="INSERT INTO `cus_order`(`order_id`, `user_id`, `product_id`, `product_price`, `product_quantity`, `shipping`, `total`,`created`) VALUES ('$or_id','$user_id','$pro_id','$pro_price','$pro_quan','$ship','$total',curdate())";
             $this->result = $this->con->query($this->sql);
             if($this->result){
                 return true;
@@ -481,7 +481,7 @@
         public function order_confirmed($id){
             $id = $id;
             $status = 1;
-            $this->sql = "UPDATE `cus_order` SET `status`='$status' WHERE order_id = '$id'";
+            $this->sql = "UPDATE `cus_order` SET `status`='$status' , created = curdate() WHERE order_id = '$id'";
             $this->result = $this->con->query($this->sql);
             if($this->result){
                 return true;
@@ -625,6 +625,28 @@
             $this->result = $this->con->query($this->sql);
             if($this->result){
                 return true;
+            }else{
+                return false;
+            }
+        }
+        //today sell
+        public function todaysell()
+        {
+            $this->sql = "SELECT SUM(total) as total FROM `cus_order` WHERE `created` = curdate() AND status = 1";
+            $this->result = $this->con->query($this->sql);
+            if($this->result){
+                return $this->result;
+            }else{
+                return false;
+            }
+        }
+        //fetch_sell_per_month
+        public function fetch_sell_per_month()
+        {
+            $this->sql = "SELECT DATE_FORMAT(created, '%M') AS month,SUM(total) AS total FROM `cus_order` WHERE `created` BETWEEN DATE_FORMAT(CURDATE() , '%Y-01-01') AND CURDATE() AND `status` = 1 GROUP BY DATE_FORMAT(`created`, '%M') ORDER BY created ASC";
+            $this->result = $this->con->query($this->sql);
+            if($this->result){
+                return $this->result;
             }else{
                 return false;
             }
